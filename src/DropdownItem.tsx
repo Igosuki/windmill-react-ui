@@ -3,8 +3,7 @@ import { ButtonProps } from './Button'
 import Button from './Button'
 import { ThemeContext } from './context/ThemeContext'
 
-type Ref = typeof Button
-const DropdownItem = React.forwardRef<Ref, ButtonProps>(function DropdownItem(props, ref) {
+const DropdownItem = React.forwardRef<typeof Button, ButtonProps>(function DropdownItem(props, ref) {
   // Note: className is passed to the inner Button
   const { children, ...other } = props
 
@@ -14,9 +13,13 @@ const DropdownItem = React.forwardRef<Ref, ButtonProps>(function DropdownItem(pr
 
   const baseStyle = dropdownItem.base
 
+
   return (
     <li className={baseStyle}>
-      <Button layout="__dropdownItem" ref={ref} {...other}>
+      <Button layout="__dropdownItem"
+        // @ts-ignore
+        ref={ref}
+        {...other}>
         {children}
       </Button>
     </li>
