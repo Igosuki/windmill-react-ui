@@ -1,4 +1,4 @@
-import React, { useLayoutEffect, useMemo } from 'react'
+import React, { useEffect, useLayoutEffect, useMemo } from 'react'
 import { ThemeContext } from './context/ThemeContext'
 import defaultTheme from './themes/default'
 import { mergeDeep } from './utils/mergeDeep'
@@ -20,6 +20,9 @@ interface Props extends React.HTMLAttributes<HTMLDivElement> {
   usePreferences?: boolean
 }
 
+
+const useIsomorphicLayoutEffect = typeof window !== 'undefined' ? useLayoutEffect : useEffect
+
 const Windmill: React.FC<Props> = ({
   children,
   theme: customTheme,
@@ -29,7 +32,7 @@ const Windmill: React.FC<Props> = ({
   const mergedTheme = mergeDeep(defaultTheme, customTheme)
   const [mode, setMode, toggleMode] = useDarkMode(usePreferences)
 
-  useLayoutEffect(() => {
+  useIsomorphicLayoutEffect(() => {
     if (dark) {
       if (setMode != null) {
         setMode('dark')
