@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Story, Meta } from '@storybook/react/types-6-0'
+import { Story, Meta } from '@storybook/react'
 
 import Label, { LabelProps } from '../Label'
 
@@ -9,7 +9,7 @@ export default {
   component: Label,
 } as Meta
 
-const Template: Story<LabelProps> = (args) => <Label {...args} />
+const Template: Story<LabelProps> = (args: any) => <Label {...args} />
 
 export const Basic = Template.bind({})
 Basic.args = {

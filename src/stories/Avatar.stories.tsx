@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Story, Meta } from '@storybook/react/types-6-0'
+import { Story, Meta } from '@storybook/react'
 
 import Avatar, { AvatarProps } from '../Avatar'
 
@@ -11,7 +11,7 @@ export default {
   component: Avatar,
 } as Meta
 
-const Template: Story<AvatarProps> = (args) => <Avatar {...args} />
+const Template: Story<AvatarProps> = (args: any) => <Avatar {...args} />
 
 export const Basic = Template.bind({})
 Basic.args = {

@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Story, Meta } from '@storybook/react/types-6-0'
+import { Story, Meta } from '@storybook/react'
 
 import Alert, { AlertProps } from '../Alert'
 
@@ -9,7 +9,7 @@ export default {
   component: Alert,
 } as Meta
 
-const Template: Story<AlertProps> = (args) => <Alert {...args} />
+const Template: Story<AlertProps> = (args: any) => <Alert {...args} />
 
 export const Basic = Template.bind({})
 Basic.args = {

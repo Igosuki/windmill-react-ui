@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Story, Meta } from '@storybook/react/types-6-0'
+import { Story, Meta } from '@storybook/react'
 
 import Textarea, { TextareaProps } from '../Textarea'
 
@@ -9,6 +9,6 @@ export default {
   component: Textarea,
 } as Meta
 
-const Template: Story<TextareaProps> = (args) => <Textarea {...args} />
+const Template: Story<TextareaProps> = (args: any) => <Textarea {...args} />
 
 export const Basic = Template.bind({})

@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Story, Meta } from '@storybook/react/types-6-0'
+import { Story, Meta } from '@storybook/react'
 
 import Dropdown, { DropdownProps } from '../Dropdown'
 import DropdownItem from '../DropdownItem'
@@ -11,7 +11,7 @@ export default {
   component: Dropdown,
 } as Meta
 
-const Template: Story<DropdownProps> = (args) => (
+const Template: Story<DropdownProps> = (args: any) => (
   <>
     <Button>Click to open</Button>
     <Dropdown {...args}>

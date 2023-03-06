@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Story, Meta } from '@storybook/react/types-6-0'
+import { Story, Meta } from '@storybook/react'
 
 import Pagination, { PaginationProps } from '../Pagination'
 
@@ -9,7 +9,7 @@ export default {
   component: Pagination,
 } as Meta
 
-const Template: Story<PaginationProps> = (args) => <Pagination {...args} />
+const Template: Story<PaginationProps> = (args: any) => <Pagination {...args} />
 
 export const Basic = Template.bind({})
 Basic.args = {

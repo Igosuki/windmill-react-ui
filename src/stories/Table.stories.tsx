@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Story, Meta } from '@storybook/react/types-6-0'
+import { Story, Meta } from '@storybook/react'
 
 import Table, { TableProps } from '../Table'
 
@@ -9,6 +9,6 @@ export default {
   component: Table,
 } as Meta
 
-const Template: Story<TableProps> = (args) => <Table {...args} />
+const Template: Story<TableProps> = (args: any) => <Table {...args} />
 
 export const Basic = Template.bind({})

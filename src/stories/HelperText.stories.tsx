@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Story, Meta } from '@storybook/react/types-6-0'
+import { Story, Meta } from '@storybook/react'
 
 import HelperText, { HelperTextProps } from '../HelperText'
 
@@ -9,7 +9,7 @@ export default {
   component: HelperText,
 } as Meta
 
-const Template: Story<HelperTextProps> = (args) => <HelperText {...args} />
+const Template: Story<HelperTextProps> = (args: any) => <HelperText {...args} />
 
 export const Basic = Template.bind({})
 Basic.args = {

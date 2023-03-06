@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Story, Meta } from '@storybook/react/types-6-0'
+import { Story, Meta } from '@storybook/react'
 
 import Select, { SelectProps } from '../Select'
 
@@ -25,7 +25,7 @@ const MultiSelectOptions = () => (
   </>
 )
 
-const Template: Story<SelectProps> = (args) => <Select {...args} />
+const Template: Story<SelectProps> = (args: any) => <Select {...args} />
 
 export const Basic = Template.bind({})
 Basic.args = {
